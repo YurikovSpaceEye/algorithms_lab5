@@ -44,20 +44,16 @@ def find_entrances(data:List[List[List]]):
     entrances = []
     for y in range(len(data)):
         if data[y][0][0] == 0:
-            if num_entrances < 2:
                 num_entrances+=1
                 entrances.append([0, y])
         if data[y][len(data[0])-1][0] == 0:
-            if num_entrances < 2:
                 num_entrances+=1
                 entrances.append([len(data[0])-1, y])
     for x in range(len(data[0])):
         if data[0][x][0] == 0:
-            if num_entrances < 2:
                 num_entrances+=1
                 entrances.append([x, 0])
         if data[len(data)-1][x][0] == 0:
-            if num_entrances < 2:
                 num_entrances+=1
                 entrances.append([len(data)-1, x])
     if num_entrances > 2:
